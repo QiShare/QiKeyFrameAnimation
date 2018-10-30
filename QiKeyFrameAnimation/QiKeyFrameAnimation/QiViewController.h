@@ -16,8 +16,6 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, assign) CGFloat squareSide;
 
-@property (nonatomic, strong) UIBezierPath *bezierPath;
-
 @end
 
 NS_ASSUME_NONNULL_END
