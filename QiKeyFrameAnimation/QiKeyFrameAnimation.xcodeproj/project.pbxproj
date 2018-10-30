@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0628D71521882CEF00568E11 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0628D71421882CEF00568E11 /* ViewController.m */; };
+		0628D717218830F000568E11 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0628D716218830F000568E11 /* Main.storyboard */; };
+		0628D71A2188349000568E11 /* QiValuesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0628D7192188349000568E11 /* QiValuesViewController.m */; };
+		0628D71D2188349700568E11 /* QiPathViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0628D71C2188349700568E11 /* QiPathViewController.m */; };
+		0628D720218857BC00568E11 /* QiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0628D71F218857BC00568E11 /* QiViewController.m */; };
 		EE17E19B212FF2BC00A66B67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17E19A212FF2BC00A66B67 /* AppDelegate.m */; };
 		EE17E1A3212FF2BE00A66B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE17E1A2212FF2BE00A66B67 /* Assets.xcassets */; };
 		EE17E1A9212FF2BE00A66B67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17E1A8212FF2BE00A66B67 /* main.m */; };
@@ -14,6 +19,15 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0628D71321882CEF00568E11 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		0628D71421882CEF00568E11 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		0628D716218830F000568E11 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		0628D7182188349000568E11 /* QiValuesViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiValuesViewController.h; sourceTree = "<group>"; };
+		0628D7192188349000568E11 /* QiValuesViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiValuesViewController.m; sourceTree = "<group>"; };
+		0628D71B2188349700568E11 /* QiPathViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiPathViewController.h; sourceTree = "<group>"; };
+		0628D71C2188349700568E11 /* QiPathViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiPathViewController.m; sourceTree = "<group>"; };
+		0628D71E218857BC00568E11 /* QiViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiViewController.h; sourceTree = "<group>"; };
+		0628D71F218857BC00568E11 /* QiViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiViewController.m; sourceTree = "<group>"; };
 		EE17E196212FF2BC00A66B67 /* QiKeyFrameAnimation.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QiKeyFrameAnimation.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EE17E199212FF2BC00A66B67 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		EE17E19A212FF2BC00A66B67 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -56,8 +70,17 @@
 			children = (
 				EE17E199212FF2BC00A66B67 /* AppDelegate.h */,
 				EE17E19A212FF2BC00A66B67 /* AppDelegate.m */,
+				0628D71321882CEF00568E11 /* ViewController.h */,
+				0628D71421882CEF00568E11 /* ViewController.m */,
+				0628D71E218857BC00568E11 /* QiViewController.h */,
+				0628D71F218857BC00568E11 /* QiViewController.m */,
+				0628D7182188349000568E11 /* QiValuesViewController.h */,
+				0628D7192188349000568E11 /* QiValuesViewController.m */,
+				0628D71B2188349700568E11 /* QiPathViewController.h */,
+				0628D71C2188349700568E11 /* QiPathViewController.m */,
 				EE17E1AF212FF38300A66B67 /* QiKeyFrameAnimationViewController.h */,
 				EE17E1B0212FF38300A66B67 /* QiKeyFrameAnimationViewController.m */,
+				0628D716218830F000568E11 /* Main.storyboard */,
 				EE17E1A2212FF2BE00A66B67 /* Assets.xcassets */,
 				EE17E1A7212FF2BE00A66B67 /* Info.plist */,
 				EE17E1A8212FF2BE00A66B67 /* main.m */,
@@ -123,6 +146,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EE17E1A3212FF2BE00A66B67 /* Assets.xcassets in Resources */,
+				0628D717218830F000568E11 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -133,8 +157,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0628D71A2188349000568E11 /* QiValuesViewController.m in Sources */,
+				0628D71D2188349700568E11 /* QiPathViewController.m in Sources */,
 				EE17E1A9212FF2BE00A66B67 /* main.m in Sources */,
 				EE17E19B212FF2BC00A66B67 /* AppDelegate.m in Sources */,
+				0628D720218857BC00568E11 /* QiViewController.m in Sources */,
+				0628D71521882CEF00568E11 /* ViewController.m in Sources */,
 				EE17E1B1212FF38300A66B67 /* QiKeyFrameAnimationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,7 +291,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qishare.wyw.QiKeyFrameAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qishare.ios.hxs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -280,7 +308,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.qishare.wyw.QiKeyFrameAnimation;
+				PRODUCT_BUNDLE_IDENTIFIER = com.qishare.ios.hxs;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
