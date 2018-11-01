@@ -10,6 +10,8 @@
 
 @interface QiViewController ()
 
+@property (nonatomic, strong) CABasicAnimation *layerAnimation;
+
 @end
 
 @implementation QiViewController
@@ -53,6 +55,20 @@
     _animation.fillMode = kCAFillModeForwards;
     _animation.delegate = self;
     _animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
+    
+    // shape layer
+    _shapeLayer = [CAShapeLayer layer];
+    _shapeLayer.lineWidth = 2.0;
+    _shapeLayer.strokeColor = [UIColor redColor].CGColor;
+    _shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    
+    // shape layer的动画
+    _layerAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+    _layerAnimation.fromValue = @.0;
+    _layerAnimation.toValue = @1.0;
+    _layerAnimation.delegate = self;
+    _layerAnimation.duration = self.animation.duration;
+    _layerAnimation.timingFunction = self.animation.timingFunction;
 }
 
 
@@ -65,6 +81,15 @@
     }
     else {
         [_imageView.layer removeAnimationForKey:@"animation"];
+    }
+    
+    if (start) {
+        [self.view.layer addSublayer:_shapeLayer];
+        [_shapeLayer addAnimation:_layerAnimation forKey:@"animation"];
+    }
+    else {
+        [_shapeLayer removeFromSuperlayer];
+        [_shapeLayer removeAnimationForKey:@"animation"];
     }
 }
 

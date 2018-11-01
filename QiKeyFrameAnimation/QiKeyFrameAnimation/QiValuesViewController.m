@@ -20,9 +20,9 @@
     
     self.animation.values = @[[NSValue valueWithCGPoint:self.imageView.center],
                               [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 2, self.squareSide * 2}],
-                              [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 2, self.squareSide * 4}],
-                              [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 4, self.squareSide * 4}],
-                              [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 4, self.squareSide * 6}]];
+                              [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 2, self.squareSide * 5}],
+                              [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 5, self.squareSide * 5}],
+                              [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 5, self.squareSide * 7}]];
     // self.animation.keyTimes = @[@.0, @.2, @.5, @.9, @1.0];
 }
 
