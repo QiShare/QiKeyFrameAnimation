@@ -21,17 +21,17 @@
     // 为animation创建path
     CGMutablePathRef path = CGPathCreateMutable();
     
-    
+#if 0
     CGPathMoveToPoint(path, NULL, self.imageView.center.x, self.imageView.center.y);
-    CGPathAddLineToPoint(path, NULL, self.squareSide * 2, self.squareSide * 2);
+    CGPathAddLineToPoint(path, NULL, self.squareSide * 2, self.squareSide * 1);
     CGPathAddLineToPoint(path, NULL, self.squareSide * 2, self.squareSide * 5);
     CGPathAddLineToPoint(path, NULL, self.squareSide * 5, self.squareSide * 5);
     CGPathAddLineToPoint(path, NULL, self.squareSide * 5, self.squareSide * 7);
-#if 0
-    CGRect drawRect = (CGRect){self.squareSide, self.squareSide, self.squareSide * 8, self.squareSide * 8};
-    CGPathAddArc(path, NULL, CGRectGetMidX(drawRect), CGRectGetMidY(drawRect), drawRect.size.width / 2, 0, 2 * M_PI, NO);
+    self.animation.keyTimes = @[@.0, @.1, @.5, @.8, @1.0];
 #endif
-    
+    CGRect drawRect = (CGRect){self.squareSide, self.squareSide, self.squareSide * 8, self.squareSide * 8};
+    CGPathAddEllipseInRect(path, NULL, drawRect);
+    self.animation.keyTimes = @[@.0, @.25, @0.5, @0.75, @1.0];
     
     self.animation.path = path;
     CGPathRelease(path);

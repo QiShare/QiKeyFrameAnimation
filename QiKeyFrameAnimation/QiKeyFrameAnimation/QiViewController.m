@@ -42,14 +42,14 @@
     
     // 初始化imageView
     _imageView = [[UIImageView alloc] initWithFrame:(CGRect){.0, .0, _squareSide, _squareSide}];
-    _imageView.center = CGPointMake(.0, .0);
+    _imageView.center = CGPointMake(_squareSide, _squareSide);
     _imageView.image = [UIImage imageNamed:@"logo_qishare"];
     [self.view addSubview:_imageView];
     
     // 初始化动画
     _animation = [CAKeyframeAnimation animation];
     _animation.keyPath = @"position";
-    _animation.duration = 10.0;
+    _animation.duration = 5.0;
     _animation.repeatCount = 1.0;
     _animation.removedOnCompletion = NO;
     _animation.fillMode = kCAFillModeForwards;
