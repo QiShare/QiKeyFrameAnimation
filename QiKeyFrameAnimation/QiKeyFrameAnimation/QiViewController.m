@@ -51,6 +51,7 @@
     _animation.repeatCount = 1.0;
     _animation.removedOnCompletion = NO;
     _animation.fillMode = kCAFillModeForwards;
+    _animation.delegate = self;
     _animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
 }
 
@@ -75,6 +76,19 @@
     sender.selected = !sender.selected;
 
     [self startAnimation:sender.selected];
+}
+
+
+#pragma mark - CAAnimationDelegate
+
+- (void)animationDidStart:(CAAnimation *)anim {
+    
+    NSLog(@"%s", __func__);
+}
+
+- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
+    
+    NSLog(@"%s", __func__);
 }
 
 @end
