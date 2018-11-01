@@ -10,7 +10,7 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface QiViewController : UIViewController
+@interface QiViewController : UIViewController<CAAnimationDelegate>
 
 @property (nonatomic, strong) CAKeyframeAnimation *animation;
 @property (nonatomic, strong) UIImageView *imageView;

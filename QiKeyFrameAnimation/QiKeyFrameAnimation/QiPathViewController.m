@@ -8,7 +8,7 @@
 
 #import "QiPathViewController.h"
 
-@interface QiPathViewController () <CAAnimationDelegate>
+@interface QiPathViewController () 
 
 @property (nonatomic, strong) CAShapeLayer *shapeLayer;
 @property (nonatomic, strong) CABasicAnimation *layerAnimation;
@@ -21,8 +21,15 @@
     
     [super viewDidLoad];
     
-    CGMutablePathRef animationPath = CGPathCreateMutable();
+    // 背景layer
+    CGRect drawRect = (CGRect){self.squareSide, self.squareSide, self.squareSide * 8, self.squareSide * 8};
+    CALayer *bglayer = [CALayer layer];
+    bglayer.frame = drawRect;
+    bglayer.backgroundColor = [UIColor yellowColor].CGColor;
+    [self.view.layer insertSublayer:bglayer atIndex:0];
     
+    // imageview 的初始位置
+    self.imageView.center = CGPointMake(drawRect.origin.x + drawRect.size.width, drawRect.origin.y + drawRect.size.height / 2);
 #if 0
     CGPathMoveToPoint(animationPath, NULL, self.imageView.center.x, self.imageView.center.y);
     CGPathAddLineToPoint(animationPath, NULL, self.squareSide * 2, self.squareSide * 2);
@@ -31,32 +38,32 @@
     CGPathAddLineToPoint(animationPath, NULL, self.squareSide * 4, self.squareSide * 6);
 #endif
     
-    self.animation.delegate = self;
-    CGRect drawRect = (CGRect){self.squareSide, self.squareSide, self.squareSide * 8, self.squareSide * 6};
-    self.imageView.center = CGPointMake(drawRect.origin.x + drawRect.size.width, drawRect.origin.y + drawRect.size.height / 2);
-    CGPathAddEllipseInRect(animationPath, NULL, drawRect);
-    self.animation.path = animationPath;
-    CGPathRelease(animationPath);
     
-    CALayer *bglayer = [CALayer layer];
-    bglayer.frame = drawRect;
-    bglayer.backgroundColor = [UIColor yellowColor].CGColor;
-    [self.view.layer insertSublayer:bglayer atIndex:0];
-
-    CGMutablePathRef layerPath = CGPathCreateMutable();
-    CGPathAddEllipseInRect(layerPath, NULL, drawRect);
-    _shapeLayer = [CAShapeLayer layer];
-    _shapeLayer.path = layerPath;
-    _shapeLayer.lineWidth = 2.0;
-    _shapeLayer.strokeColor = [UIColor redColor].CGColor;
-    _shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    CGMutablePathRef path = CGPathCreateMutable();
     
-    _layerAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
-    _layerAnimation.fromValue = @.0;
-    _layerAnimation.toValue = @1.0;
-    _layerAnimation.delegate = self;
-    _layerAnimation.duration = self.animation.duration;
-    _layerAnimation.timingFunction = self.animation.timingFunction;
+    CGPathAddEllipseInRect(path, NULL, drawRect);
+//    CGPathAddArc(path, NULL, CGRectGetMidX(drawRect), CGRectGetMidY(drawRect), drawRect.size.width/2, 0, 2*M_PI, NO);
+    
+    
+    {
+        _shapeLayer = [CAShapeLayer layer];
+        _shapeLayer.path = path;
+        _shapeLayer.lineWidth = 2.0;
+        _shapeLayer.strokeColor = [UIColor redColor].CGColor;
+        _shapeLayer.fillColor = [UIColor clearColor].CGColor;
+    }
+    
+    self.animation.path = path;
+    CGPathRelease(path);
+    
+    {
+        _layerAnimation = [CABasicAnimation animationWithKeyPath:@"strokeEnd"];
+        _layerAnimation.fromValue = @.0;
+        _layerAnimation.toValue = @1.0;
+        _layerAnimation.delegate = self;
+        _layerAnimation.duration = self.animation.duration;
+        _layerAnimation.timingFunction = self.animation.timingFunction;
+    }
 }
 
 
@@ -67,7 +74,7 @@
     [super startAnimation:start];
     
     if (start) {
-        [self.view.layer insertSublayer:_shapeLayer atIndex:1];
+        [self.view.layer addSublayer:_shapeLayer];
         [_shapeLayer addAnimation:_layerAnimation forKey:@"animation"];
     }
     else {
@@ -76,18 +83,5 @@
     }
 }
 
-
-
-#pragma mark - CAAnimationDelegate
-
-- (void)animationDidStart:(CAAnimation *)anim {
-    
-    NSLog(@"%s", __func__);
-}
-
-- (void)animationDidStop:(CAAnimation *)anim finished:(BOOL)flag {
-    
-    NSLog(@"%s", __func__);
-}
 
 @end
