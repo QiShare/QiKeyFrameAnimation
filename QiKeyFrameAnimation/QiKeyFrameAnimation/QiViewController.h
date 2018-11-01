@@ -16,6 +16,8 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, strong) UIImageView *imageView;
 @property (nonatomic, assign) CGFloat squareSide;
 
+- (void)startAnimation:(BOOL)start;
+
 @end
 
 NS_ASSUME_NONNULL_END

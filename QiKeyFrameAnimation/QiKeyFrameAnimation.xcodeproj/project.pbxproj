@@ -15,7 +15,6 @@
 		EE17E19B212FF2BC00A66B67 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17E19A212FF2BC00A66B67 /* AppDelegate.m */; };
 		EE17E1A3212FF2BE00A66B67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EE17E1A2212FF2BE00A66B67 /* Assets.xcassets */; };
 		EE17E1A9212FF2BE00A66B67 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17E1A8212FF2BE00A66B67 /* main.m */; };
-		EE17E1B1212FF38300A66B67 /* QiKeyFrameAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = EE17E1B0212FF38300A66B67 /* QiKeyFrameAnimationViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,8 +33,6 @@
 		EE17E1A2212FF2BE00A66B67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		EE17E1A7212FF2BE00A66B67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EE17E1A8212FF2BE00A66B67 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		EE17E1AF212FF38300A66B67 /* QiKeyFrameAnimationViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = QiKeyFrameAnimationViewController.h; sourceTree = "<group>"; };
-		EE17E1B0212FF38300A66B67 /* QiKeyFrameAnimationViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QiKeyFrameAnimationViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,8 +75,6 @@
 				0628D7192188349000568E11 /* QiValuesViewController.m */,
 				0628D71B2188349700568E11 /* QiPathViewController.h */,
 				0628D71C2188349700568E11 /* QiPathViewController.m */,
-				EE17E1AF212FF38300A66B67 /* QiKeyFrameAnimationViewController.h */,
-				EE17E1B0212FF38300A66B67 /* QiKeyFrameAnimationViewController.m */,
 				0628D716218830F000568E11 /* Main.storyboard */,
 				EE17E1A2212FF2BE00A66B67 /* Assets.xcassets */,
 				EE17E1A7212FF2BE00A66B67 /* Info.plist */,
@@ -163,7 +158,6 @@
 				EE17E19B212FF2BC00A66B67 /* AppDelegate.m in Sources */,
 				0628D720218857BC00568E11 /* QiViewController.m in Sources */,
 				0628D71521882CEF00568E11 /* ViewController.m in Sources */,
-				EE17E1B1212FF38300A66B67 /* QiKeyFrameAnimationViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

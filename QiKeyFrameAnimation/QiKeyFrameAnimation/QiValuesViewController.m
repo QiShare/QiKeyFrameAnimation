@@ -23,7 +23,7 @@
                               [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 2, self.squareSide * 4}],
                               [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 4, self.squareSide * 4}],
                               [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 4, self.squareSide * 6}]];
-    self.animation.keyTimes = @[@.0, @.2, @.5, @.9, @1.0];
+    // self.animation.keyTimes = @[@.0, @.2, @.5, @.9, @1.0];
 }
 
 @end

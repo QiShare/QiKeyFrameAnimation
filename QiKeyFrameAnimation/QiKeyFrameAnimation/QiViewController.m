@@ -55,18 +55,26 @@
 }
 
 
-#pragma mark - Action functions
+#pragma mark - Public functions
 
-- (IBAction)startAnimationButtonClicked:(UIButton *)sender {
+- (void)startAnimation:(BOOL)start {
     
-    sender.selected = !sender.selected;
-    
-    if (sender.selected) {
+    if (start) {
         [_imageView.layer addAnimation:_animation forKey:@"animation"];
     }
     else {
         [_imageView.layer removeAnimationForKey:@"animation"];
     }
+}
+
+
+#pragma mark - Action functions
+
+- (IBAction)startAnimationButtonClicked:(UIButton *)sender {
+    
+    sender.selected = !sender.selected;
+
+    [self startAnimation:sender.selected];
 }
 
 @end
