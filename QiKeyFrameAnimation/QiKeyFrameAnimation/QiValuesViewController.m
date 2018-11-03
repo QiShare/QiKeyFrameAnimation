@@ -19,7 +19,7 @@
     [super viewDidLoad];
     
     self.animation.values = @[[NSValue valueWithCGPoint:self.imageView.center],
-                              [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 2, self.squareSide * 2}],
+                              [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 2, self.squareSide * 1}],
                               [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 2, self.squareSide * 5}],
                               [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 5, self.squareSide * 5}],
                               [NSValue valueWithCGPoint:(CGPoint){self.squareSide * 5, self.squareSide * 7}]];

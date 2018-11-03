@@ -49,11 +49,11 @@
     // 初始化动画
     _animation = [CAKeyframeAnimation animation];
     _animation.keyPath = @"position";
+    _animation.delegate = self;
     _animation.duration = 5.0;
     _animation.repeatCount = 1.0;
     _animation.removedOnCompletion = NO;
     _animation.fillMode = kCAFillModeForwards;
-    _animation.delegate = self;
     _animation.timingFunction = [CAMediaTimingFunction functionWithName:kCAMediaTimingFunctionLinear];
     
     // shape layer
