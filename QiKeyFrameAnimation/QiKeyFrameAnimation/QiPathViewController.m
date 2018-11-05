@@ -26,7 +26,7 @@
     
     if (start) {
         NSUInteger r = arc4random() % 2;
-        if (r == 0) {
+        if (r < 0) {
             self.shapeLayer.path = [self setupLinePathAnimation];
         } else {
             self.shapeLayer.path = [self setupEllipsePathAnimation];
@@ -59,13 +59,13 @@
 
 - (CGMutablePathRef)setupEllipsePathAnimation {
     
-    CGRect drawRect = (CGRect){self.squareSide, self.squareSide, self.squareSide * 8, self.squareSide * 8};
+    CGRect drawRect = (CGRect){self.squareSide, self.squareSide, self.squareSide * 8, self.squareSide * 6};
     
     CGMutablePathRef path = CGPathCreateMutable();
     CGPathAddEllipseInRect(path, NULL, drawRect);
     
-    // self.animation.keyTimes = @[@.0, @.25, @0.5, @0.75, @1.0];
-    self.animation.calculationMode = kCAAnimationPaced;
+    self.animation.keyTimes = @[@.0, @.25, @0.5, @0.75, @1.0];
+    // self.animation.calculationMode = kCAAnimationPaced;
     self.animation.path = path;
     
     return path;
