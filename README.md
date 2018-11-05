@@ -1,7 +1,11 @@
 # QiKeyFrameAnimation
-KeyFrameAnimation使用简单介绍
-* CAKeyframeAnimation 之视图绕某个路径做动画
+
+文章地址：[iOS 关键帧动画](https://www.jianshu.com/p/a8fdebe91eb5)。
 
 效果图如下：
 
-![](https://github.com/QiShare/QiKeyFrameAnimation/blob/master/cameraBasketballGif1.gif)
+![01](/Source/QiKeyframeAnimation_01.gif)
+
+![02](/Source/QiKeyframeAnimation_02.gif)
+
+![03](/Source/QiKeyframeAnimation_03.gif)
